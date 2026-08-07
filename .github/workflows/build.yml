@@ -39,10 +39,8 @@ jobs:
                       ${{ runner.os }}-nuxt-build-
             - name: Install dependencies
               run: npm ci
-            - name: Obtain Environment Variable
-              run: source ./getPath.bash
             - name: Static HTML export with Nuxt
-              run: npm run generate
+              run: DATABASE_PATH="$(pwd)/assets/databases/" npm run generate
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:

@@ -23,9 +23,7 @@ jobs:
             - run: node --version
             - name: Install Dependencies
               run: npm install
-            - name: Obtain Environment Varaible
-              run: source ./getPath.bash
             - name: Run eslint
               run: npm run lint
             - name: Run build test
-              run: npm run build
+              run: DATABASE_PATH="$(pwd)/assets/databases/" npm run build
