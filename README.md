@@ -40,4 +40,4 @@ npm run documentation # typedoc でドキュメンテーションを生成
 * `assets/pankuzuEntries.json`: パンくずリストで使用される主なページのリンクと名前の紐付けが列挙されている
 * `docs/`: `typedoc`で生成されたドキュメンテーションが入っている、`python -m http.server`などで`localhost`にホストして読む
 * `dist/`, `.output/`: `npm run generate`で生成された静的ウェブサイト本体、プロダクションレディーな状態 `dist/`は`.output/`へのリンクである
-
+* `getPath.bash`: ビルドに必要な環境変数を`source getPath.bash`でセットする
